@@ -8,6 +8,7 @@ import {
 } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 import { useNavigate } from 'react-router-dom';
+import "./Nav.css"
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -75,7 +76,7 @@ export default function NavbarMinimal() {
   ));
 
   return (
-    <Navbar height={750} width={{ base: 80 }} p="md">
+    <Navbar className='left' height={750} width={{ base: 80 }} p="md">
       <Center>
         <MantineLogo type="mark" size={30} />
       </Center>
