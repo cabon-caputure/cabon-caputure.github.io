@@ -66,7 +66,7 @@ export default function NavbarMinimal() {
       {...link}
       key={link.label}
       active={index === active}
-      onClick={() => {setActive(index), link.click}}
+      onClick={() => {setActive(index); link.click}}
     />
   ));
 
