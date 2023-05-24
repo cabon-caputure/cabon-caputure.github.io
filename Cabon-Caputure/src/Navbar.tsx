@@ -7,6 +7,7 @@ import {
   IconUser,
 } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -49,22 +50,23 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   );
 }
 
-const mockdata = [
-  { icon: IconHome2, label: 'Home' },
-  { icon: IconGauge, label: 'Presentation' },
-  { icon: IconDeviceDesktopAnalytics, label: 'Game' },
-  { icon: IconUser, label: 'Animation'},
-];
-
 export default function NavbarMinimal() {
   const [active, setActive] = useState(2);
+  const navigate = useNavigate()
+
+  const mockdata = [
+    { icon: IconHome2, label: 'Home', click: () => {navigate("/")} },
+    { icon: IconGauge, label: 'Presentation', click: () => {navigate("/presentation")} },
+    { icon: IconDeviceDesktopAnalytics, label: 'Game', click: () => {navigate("/game")} },
+    { icon: IconUser, label: 'Animation', click: () => {navigate("/animation")}},
+  ];
 
   const links = mockdata.map((link, index) => (
     <NavbarLink
       {...link}
       key={link.label}
       active={index === active}
-      onClick={() => setActive(index)}
+      onClick={() => {setActive(index), link.click}}
     />
   ));
 
