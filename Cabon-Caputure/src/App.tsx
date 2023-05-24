@@ -7,11 +7,11 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/animation" element={<Animation />} />
       </Routes>
+      <Navbar />
     </>
   )
 }

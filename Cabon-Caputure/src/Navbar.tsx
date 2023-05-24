@@ -55,10 +55,10 @@ export default function NavbarMinimal() {
   const navigate = useNavigate()
 
   const mockdata = [
-    { icon: IconHome2, label: 'Home', click: () => {navigate("/")} },
-    { icon: IconGauge, label: 'Presentation', click: () => {navigate("/presentation")} },
-    { icon: IconDeviceDesktopAnalytics, label: 'Game', click: () => {navigate("/game")} },
-    { icon: IconUser, label: 'Animation', click: () => {navigate("/animation")}},
+    { icon: IconHome2, label: 'Home', url: "/" },
+    { icon: IconGauge, label: 'Presentation', url: "/presentation" },
+    { icon: IconDeviceDesktopAnalytics, label: 'Game', url: "/game" },
+    { icon: IconUser, label: 'Animation', url: "/animation"},
   ];
 
   const links = mockdata.map((link, index) => (
@@ -66,7 +66,11 @@ export default function NavbarMinimal() {
       {...link}
       key={link.label}
       active={index === active}
-      onClick={() => {setActive(index); link.click}}
+      onClick={() => {
+        setActive(index); 
+        navigate(link.url)
+      }
+      }
     />
   ));
 

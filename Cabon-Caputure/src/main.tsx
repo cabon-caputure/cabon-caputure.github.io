@@ -5,9 +5,9 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <BrowserRouter>
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </MantineProvider>,
+      <App />
+    </MantineProvider>
+  </BrowserRouter>,
 )
