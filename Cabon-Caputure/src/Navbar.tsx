@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, rem } from '@mantine/core';
 import {
   IconHome2,
-  IconGauge,
   IconDeviceDesktopAnalytics,
   IconUser,
 } from '@tabler/icons-react';
