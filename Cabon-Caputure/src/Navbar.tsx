@@ -57,7 +57,6 @@ export default function NavbarMinimal() {
 
   const mockdata = [
     { icon: IconHome2, label: 'Home', url: "/" },
-    { icon: IconGauge, label: 'Presentation', url: "/presentation" },
     { icon: IconDeviceDesktopAnalytics, label: 'Game', url: "/game" },
     { icon: IconUser, label: 'Animation', url: "/animation"},
   ];
